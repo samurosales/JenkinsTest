@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+  <h1>Adding 'a' and 'b'</h1>
+
+  a: <input type="number" name="a" id="a"><br> b: <input type="number" name="b" id="b"><br>
+  <button onclick="add(document.getElementById('a').value,document.getElementById('b').value)">Add</button>
+
+  <script>
+    async function add(a, b) {
+      var sum = await fetch(`http://localhost:3000/add/${a}/${b}`)
+                .then(response => response.json())
+                .then(data => { return data })
+      alert(sum);
+    }
+  </script>
+
+</body>
+</html>
