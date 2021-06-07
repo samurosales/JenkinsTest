@@ -8,6 +8,7 @@ pipeline {
                 nodejs('NodeJS'){
                     sh 'npm --version'
                     sh 'npm install'
+                    sh 'npm start'
                 }
             }
         }
