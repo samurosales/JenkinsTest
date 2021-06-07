@@ -15,6 +15,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                nodejs('NodeJS'){
+                    sh 'npm test'
+                }
             }
         }
         stage('Deploy') {
