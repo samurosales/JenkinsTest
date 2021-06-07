@@ -6,7 +6,7 @@ var cors = require('cors')
 app.use(cors())
 
 app.get('/add/:val1/:val2', (req, res) => {
-  res.json(parseInt(req.params.val1) - parseInt(req.params.val2))
+  res.json(parseInt(req.params.val1) + parseInt(req.params.val2))
 })
 
 app.get('/', (req, res) => {
