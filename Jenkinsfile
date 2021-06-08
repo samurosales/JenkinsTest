@@ -23,7 +23,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'cp -r . /nodeApp'
+                sh 'rm -r $HOME/nodeApp'
+                sh 'mkdir $HOME/nodeApp'
+                sh 'cp -r . $HOME/nodeApp'
             }
         }
     }
